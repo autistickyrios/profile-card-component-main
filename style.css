@@ -1,0 +1,140 @@
+/* GLOBAL RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* GENERAL STYLING */
+
+body {
+  color: hsl(229, 23%, 23%);
+  width: 100%;
+  height: auto;
+  font-family: "Kumbh Sans", sans-serif;
+  background: url(images/bg-pattern-bottom.svg) bottom -600px right -300px
+      no-repeat,
+    url(images/bg-pattern-top.svg) top -600px left -300px no-repeat;
+  background-color: hsl(185, 75%, 39%);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 35rem;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.profile-section {
+  position: relative;
+}
+.profile-img {
+  top: 0;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, 80%);
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.name {
+  font-size: 1.6rem;
+  margin-top: 6rem;
+}
+
+.age {
+  margin-left: 0.5rem;
+  color: hsl(0, 0%, 59%);
+}
+
+.city {
+  color: hsl(0, 0%, 59%);
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid hsla(0, 0%, 59%, 0.219);
+}
+
+.stats {
+  font-size: 1.2rem;
+  margin: 1.8rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+p {
+  color: hsl(0, 0%, 59%);
+  font-size: 1.2rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 25em) {
+  body {
+    height: 100%;
+    width: auto;
+    margin: 2rem;
+  }
+  main {
+    height: 100%;
+  }
+}
